@@ -1,20 +1,67 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Home Page</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <h1>Home Page</h1>
-        
-        <script src="" async defer></script>
-    </body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="static\slider1.jpg" style="height:600px;" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="static\slider2.jpg" style="height:600px;" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="static\slider3.jpg" style="height:600px;" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <h1>Best Engineering College in Noida</h1>
+    <p>There are 10 Engineering colleges in Noida that offer BTech courses. All the colleges are owned privately. Engineering Colleges in Noida offer full-time BTech courses in Noida that are your gateway to a career in Engineering. These courses are offered for a duration of four years. Of the many BTech specialisations, Computer Science Engineering is the most sought-after and offers bright prospects for a student’s growth. The BTech colleges in Noida accept scores obtained by students in numerous national or state-level examinations, including JEE Main, UPCET BTech, and SITEEE.</p>
+</div>
+
+<div class="container-fluid">
+    <h2>Our College Highlights</h2>
+    <p>The table below mentions key highlights of our college: </p>
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th class="col-md-6">Parameters</th>
+                <th class="col-md-6">Statistics</th>
+            </tr>
+        </thead>
+            <tbody>
+                <tr>
+                    <td>College Code</td>
+                    <td>115</td>
+                </tr>
+                <tr>
+                    <td>Fees</td>
+                    <td>Annual Fee INR 1-2 lakh: 10%</td>
+                </tr>
+                <tr>
+                    <td>Specialisations</td>
+                    <td>Computer Science Engineering, Electronics Engineering, Mechanical Engineering,  Civil Engineering, etc.</td>
+                </tr>
+                <tr>
+                    <td>Admission Process</td>
+                    <td>Entrance-Exam</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock content %}
