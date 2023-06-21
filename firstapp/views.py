@@ -17,3 +17,6 @@ def services(request):
 def contact(request):
     # return HttpResponse("This is my contact page")
     return render(request,'contact.html')
+
+def portfolio(request):
+    return render(request, 'portfolio.html')
