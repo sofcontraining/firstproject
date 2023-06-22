@@ -2,25 +2,26 @@
 
 {% block content %}
 
-<h1>Contact Us</h1>
+
 <div class="container">
-    <form action="{% url 'contact' %}" method="POST">
+    <h1 class"text-center">Contact Us</h1>
+    <form action="contact" method="POST">
         {% csrf_token %}
         <div class="mb-3">
             <label for="fname" class="form-label">First Name</label>
-            <input type="text" class="form-control" name="fname" placeholder="First Name" value="{{fname}}">
+            <input type="text" class="form-control" name="fname" placeholder="First Name" value="{{fname}}" required>
         </div>
         <div class="mb-3">
             <label for="lname" class="form-label">Last Name</label>
-            <input type="text" class="form-control" name="lname" placeholder="Last Name" value="{{lname}}">
+            <input type="text" class="form-control" name="lname" placeholder="Last Name" value="{{lname}}" required>
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email Address</label>
-            <input type="email" class="form-control" name="email" placeholder="Email Address" value="{{email}}">
+            <input type="email" class="form-control" name="email" placeholder="Email Address" value="{{email}}" required>
         </div>
         <div class="mb-3">
             <label for="contact" class="form-label">Contact</label>
-            <input type="text" class="form-control" name="contact" placeholder="Contact" value="{{contact}}">
+            <input type="text" class="form-control" name="contact" placeholder="Contact" value="{{contact}}" required>
         </div>
         <div class="mb-3">
             <button type="submit" class="btn btn-primary">Submit</button>
