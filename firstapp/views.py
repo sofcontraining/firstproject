@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from .forms import MemberForm
-from .models import Member
+from .models import Member, Course
 # Create your views here.
 
 def home(request):
@@ -11,9 +11,10 @@ def about(request):
     # return HttpResponse("This is my contact page")
     return render(request,'about.html')
 
-def services(request):
-    # return HttpResponse("This is my contact page")
-    return render(request,'services.html')
+def courses(request):
+    allCourse = Course.objects.all()
+    context = {'allCourse':allCourse}
+    return render(request,'courses.html', context)
 
 def contact(request):
     if request.method == "POST":

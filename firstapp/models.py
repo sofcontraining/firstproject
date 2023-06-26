@@ -10,5 +10,14 @@ class Member(models.Model):
     
     def __str__(self):
         return self.fname +" "+ self.lname
+    
+class Course(models.Model):
+    sno = models.AutoField(primary_key=True)
+    cname = models.CharField(max_length=255)
+    csummary = models.TextField()
+    cimg = models.ImageField(upload_to='courseimages')
+    
+    def __str__(self):
+        return self.cname
 
 
