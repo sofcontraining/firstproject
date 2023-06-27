@@ -15,17 +15,19 @@
     <h1>Our Courses</h1>
 </div>
 <div class="container-fluid my-3">
-    <div class="card" style="width: 18rem;">
-        <img src="static\Courses\css.svg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">View Full Details</a>
+    <div class="row">
+        {% for i in allCourse %}
+        <div class="col-md-3">
+            <div class="card">
+                <img src="{{i.cimg.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{i.cname}}</h5>
+                    <p class="card-text">{{i.csummary | truncatechars:50}}</p>
+                    <a href="{{i.slug}}" class="btn btn-primary">View Full Details</a>
+                </div>
+            </div>
         </div>
+        {% endfor %}
     </div>
 </div>
-
-{% for i in allCourse %}
-    {{i.cname}} {{i.csummary}} {{i.cimg}}
-{% endfor %}
 {% endblock content %}

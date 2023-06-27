@@ -16,6 +16,11 @@ def courses(request):
     context = {'allCourse':allCourse}
     return render(request,'courses.html', context)
 
+def coursedetails(request, slug):
+    fullDetails = Course.objects.filter(slug=slug).first()
+    context = {'fullDetails':fullDetails}
+    return render(request, 'coursedetails.html', context)
+
 def contact(request):
     if request.method == "POST":
         form = MemberForm(request.POST or None)

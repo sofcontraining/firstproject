@@ -16,6 +16,9 @@ class Course(models.Model):
     cname = models.CharField(max_length=255)
     csummary = models.TextField()
     cimg = models.ImageField(upload_to='courseimages')
+    heading = models.CharField(max_length=100)
+    slug = models.SlugField(max_length=500)
+    
     
     def __str__(self):
         return self.cname
